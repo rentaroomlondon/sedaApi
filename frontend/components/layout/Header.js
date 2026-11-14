@@ -26,8 +26,8 @@ export default function Header() {
       <div className="border-b border-ink-100 bg-surface-2 px-4 py-2 text-center text-xs text-ink-700 sm:py-2.5 sm:text-sm">
         <span className="hidden sm:inline">Now taking new projects · Free scope and quote for every request</span>
         <span className="sm:hidden">Free quote on every project</span>
-        <Link href="/order" className="ml-1.5 whitespace-nowrap font-bold text-brand-600 hover:text-brand-700">
-          <span className="hidden sm:inline">Order a service →</span><span className="sm:hidden">Order →</span>
+        <Link href="/order" className="ml-1.5 hidden whitespace-nowrap font-bold text-brand-600 hover:text-brand-700 sm:inline">
+          Order a service →
         </Link>
       </div>
       <header className={`sticky top-0 z-50 border-b bg-white/85 backdrop-blur-xl transition-[border-color,box-shadow] ${
@@ -52,11 +52,9 @@ export default function Header() {
           </nav>
           <ButtonLink href="/order" size="sm" arrow className="hidden lg:inline-flex">Order a service</ButtonLink>
 
-          <ButtonLink href="/order" size="sm" className="ml-auto lg:hidden">Order</ButtonLink>
-
           <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
-            className={`relative size-10 shrink-0 rounded-full transition-colors duration-300 lg:hidden ${
+            className={`relative ml-auto size-10 shrink-0 rounded-full transition-colors duration-300 lg:hidden ${
               open ? "bg-ink-900" : "bg-surface-2 hover:bg-ink-100"}`}>
             <span aria-hidden="true"
               className={`absolute left-1/2 top-1/2 h-[2px] -translate-x-1/2 rounded-full transition-all duration-300 ${
