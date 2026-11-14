@@ -12,10 +12,10 @@ export default function OrderIntro() {
   return (
     <div className="lg:sticky lg:top-28">
       <span className="rise"><Eyebrow>Order a service</Eyebrow></span>
-      <h1 className="rise mt-5 font-display text-5xl font-extrabold leading-[1.03] tracking-tight text-balance sm:text-6xl" style={{ animationDelay: ".08s" }}>
+      <h1 className="rise mt-5 font-display text-[2.5rem] font-extrabold leading-[1.05] tracking-tight text-balance sm:text-6xl" style={{ animationDelay: ".08s" }}>
         Tell us what you want to <span className="text-gradient">build.</span>
       </h1>
-      <p className="rise mt-5 max-w-lg text-lg text-ink-500" style={{ animationDelay: ".16s" }}>
+      <p className="rise mt-5 max-w-lg text-base text-ink-500 sm:text-lg" style={{ animationDelay: ".16s" }}>
         Send the form and we will reply with a time for a technical call. Your scope and quote are free.
       </p>
 
@@ -23,8 +23,8 @@ export default function OrderIntro() {
         {contacts.map((c) => {
           const inner = (
             <>
-              <span className="grid size-11 place-items-center rounded-xl bg-gradient-brand text-white"><Icon name={c.icon} className="size-5" /></span>
-              <span><span className="block text-xs font-semibold text-ink-500">{c.label}</span><span className="font-bold">{c.value}</span></span>
+              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-brand text-white"><Icon name={c.icon} className="size-5" /></span>
+              <span className="min-w-0"><span className="block text-xs font-semibold text-ink-500">{c.label}</span><span className="break-all font-bold">{c.value}</span></span>
             </>
           );
           const cls = "flex items-center gap-4 rounded-2xl border border-ink-100 bg-white p-4 transition hover:translate-x-1 hover:border-brand-400";

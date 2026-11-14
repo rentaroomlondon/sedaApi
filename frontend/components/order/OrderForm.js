@@ -112,9 +112,9 @@ export default function OrderForm() {
       <div role="group" aria-label="Type of request" className="mb-6 grid grid-cols-2 gap-2.5">
         {[["project", "Order a service", "Build something with us"], ["partner", "Become a partner", "Vendors and integrators"]].map(([k, t, s]) => (
           <button key={k} type="button" aria-pressed={data.kind === k} onClick={() => setData((d) => ({ ...d, kind: k }))}
-            className={`grid gap-0.5 rounded-2xl border-[1.5px] px-4 py-3.5 text-left transition ${
+            className={`grid gap-0.5 rounded-2xl border-[1.5px] px-3 py-3 text-left sm:px-4 sm:py-3.5 transition ${
               data.kind === k ? "border-brand-500 bg-brand-50 ring-4 ring-brand-500/12" : "border-ink-100 bg-white hover:border-ink-300"}`}>
-            <b className="text-[15px] text-ink-900">{t}</b>
+            <b className="text-sm text-ink-900 sm:text-[15px]">{t}</b>
             <span className="text-xs text-ink-500">{s}</span>
           </button>
         ))}
@@ -144,7 +144,7 @@ export default function OrderForm() {
                   const on = data.services.includes(s);
                   return (
                     <button key={s} type="button" aria-pressed={on} onClick={() => toggle(s)}
-                      className={`inline-flex items-center gap-1.5 rounded-full border-[1.5px] px-4 py-2.5 text-sm font-bold transition ${
+                      className={`inline-flex items-center gap-1.5 rounded-full border-[1.5px] px-3.5 py-2 text-[13px] font-bold transition sm:px-4 sm:py-2.5 sm:text-sm ${
                         on ? "scale-[1.03] border-brand-600 bg-brand-600 text-white" : "border-ink-100 bg-white text-ink-700 hover:border-brand-400"}`}>
                       {on && <Icon name="check" className="size-4" strokeWidth={3} />}{s}
                     </button>
@@ -204,7 +204,7 @@ export default function OrderForm() {
           <button type="button" onClick={() => { setError(""); setStep((s) => s - 1); }}
             className={`rounded-xl px-3 py-2 font-bold text-ink-700 hover:bg-surface-2 ${step === 1 ? "invisible" : ""}`}>← Back</button>
           <button type="submit" disabled={status === "sending"}
-            className="btn-shine group inline-flex items-center gap-2 rounded-xl bg-gradient-brand px-6 py-3.5 font-bold text-white shadow-[0_14px_34px_-12px_rgb(168_120_24/.65)] transition hover:-translate-y-0.5 disabled:opacity-60">
+            className="btn-shine group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-5 py-3.5 sm:px-6 font-bold text-white shadow-[0_14px_34px_-12px_rgb(168_120_24/.65)] transition hover:-translate-y-0.5 disabled:opacity-60">
             {status === "sending" ? "Sending…" : step < 3 ? "Next step" : data.kind === "partner" ? "Send partner request" : "Send my order"}
             <Icon name="arrow" className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2.2} />
           </button>

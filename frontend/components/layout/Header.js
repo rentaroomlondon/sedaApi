@@ -23,13 +23,13 @@ export default function Header() {
 
   return (
     <>
-      <div className="border-b border-ink-100 bg-surface-2 px-4 py-2.5 text-center text-sm text-ink-700">
-        Now taking new projects · Free scope and quote for every request
-        <Link href="/order" className="ml-2 font-bold text-brand-600 hover:text-brand-700">Order a service →</Link>
+      <div className="border-b border-ink-100 bg-surface-2 px-4 py-2 text-center text-xs text-ink-700 sm:py-2.5 sm:text-sm">
+        <span className="hidden sm:inline">Now taking new projects · </span>Free scope and quote for every request
+        <Link href="/order" className="ml-1.5 whitespace-nowrap font-bold text-brand-600 hover:text-brand-700">Order a service →</Link>
       </div>
       <header className={`sticky top-0 z-50 border-b bg-white/85 backdrop-blur-xl transition-[border-color,box-shadow] ${
         scrolled ? "border-ink-100 shadow-[0_10px_30px_-22px_rgb(42_34_22/.35)]" : "border-transparent"}`}>
-        <div className="mx-auto flex h-[74px] max-w-7xl items-center gap-6 px-5 sm:px-8">
+        <div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-5 sm:h-[74px] sm:px-8">
           <Link href="/" className="group flex items-center gap-2.5 font-display text-xl font-extrabold tracking-[.08em] text-ink-900">
             <span className="transition-transform duration-500 group-hover:-rotate-12"><Logo /></span>
             SEDAAPI
@@ -59,7 +59,7 @@ export default function Header() {
           </button>
         </div>
 
-        <div id="mobile-nav" className={`overflow-hidden border-t border-ink-100 bg-white transition-[max-height] duration-300 lg:hidden ${open ? "max-h-[520px]" : "max-h-0 border-transparent"}`}>
+        <div id="mobile-nav" className={`overflow-hidden border-t border-ink-100 bg-white transition-[max-height] duration-300 lg:hidden ${open ? "max-h-[calc(100dvh-4rem)] overflow-y-auto" : "max-h-0 border-transparent"}`}>
           <nav aria-label="Mobile" className="grid gap-1 px-5 py-4">
             {nav.map((item) => (
               <Link key={item.href} href={item.href} onClick={() => setOpen(false)}

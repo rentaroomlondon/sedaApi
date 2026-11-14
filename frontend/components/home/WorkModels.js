@@ -4,14 +4,14 @@ import { models } from "@/lib/content";
 
 export default function WorkModels() {
   return (
-    <section id="models" className="bg-surface py-24 sm:py-28">
+    <section id="models" className="bg-surface py-16 sm:py-28">
       <Container>
         <Reveal><SectionHead eyebrow="Ways to work with us" title="Choose how you want to work."
           text="Every option starts with a free scope. Final prices depend on the project and are confirmed in writing." /></Reveal>
-        <div className="grid items-stretch gap-6 lg:grid-cols-3">
+        <div className="grid items-stretch gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {models.map((m, i) => (
             <Reveal key={m.title} delay={i * 90}
-              className={`relative flex flex-col gap-5 rounded-3xl border p-8 transition duration-300 hover:-translate-y-1.5 ${
+              className={`relative flex flex-col gap-5 rounded-3xl border p-6 sm:p-8 transition duration-300 hover:-translate-y-1.5 ${
                 m.popular ? "border-2 border-brand-600 bg-brand-50 text-ink-900 shadow-[0_30px_60px_-35px_rgb(168_120_24/.45)] lg:scale-[1.04]" : "border-ink-100 bg-white hover:shadow-[0_30px_60px_-35px_rgb(42_34_22/.4)]"}`}>
               {m.popular && <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-brand px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-white">Most popular</span>}
               <div>

@@ -5,7 +5,7 @@ import { company, services } from "@/lib/content";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink-100 bg-surface-2 pb-8 pt-20 text-ink-500">
+    <footer className="border-t border-ink-100 bg-surface-2 pb-8 pt-14 text-ink-500 sm:pt-20">
       <Container>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
@@ -36,14 +36,14 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-bold text-ink-900">Contact</h3>
             <ul className="grid gap-2.5">
-              <li><a href={`mailto:${company.email}`} className="hover:text-brand-600">{company.email}</a></li>
+              <li><a href={`mailto:${company.email}`} className="break-all hover:text-brand-600">{company.email}</a></li>
               <li><a href={company.website} rel="noopener" className="hover:text-brand-600">{company.websiteLabel}</a></li>
               <li>{company.city}</li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center justify-between gap-5 rounded-3xl border border-ink-100 bg-white p-8">
+        <div className="mt-12 flex flex-col items-stretch justify-between gap-5 rounded-3xl border border-ink-100 bg-white p-6 sm:mt-14 sm:flex-row sm:flex-wrap sm:items-center sm:p-8">
           <p className="font-display text-2xl font-bold text-ink-900 sm:text-3xl">Ready to start your project?</p>
           <ButtonLink href="/order" size="lg" arrow>Order a service</ButtonLink>
         </div>

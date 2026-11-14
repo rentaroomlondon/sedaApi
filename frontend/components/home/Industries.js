@@ -5,14 +5,14 @@ import { industries } from "@/lib/content";
 
 export default function Industries() {
   return (
-    <section id="industries" className="py-24 sm:py-28">
+    <section id="industries" className="py-16 sm:py-28">
       <Container>
         <Reveal><SectionHead eyebrow="Industries" title="Where our services make the biggest difference."
           text="The same six services, applied to the problems each industry actually has." /></Reveal>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((ind, i) => (
             <Reveal key={ind.title} delay={i * 80}
-              className="group grid content-start gap-3 rounded-3xl border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-aqua-300/15 p-7 transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-35px_rgb(168_120_24/.45)]">
+              className="group grid content-start gap-3 rounded-3xl border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-aqua-300/15 p-6 sm:p-7 transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-35px_rgb(168_120_24/.45)]">
               <span className="grid size-14 place-items-center rounded-2xl bg-white text-brand-600 shadow-[0_10px_24px_-12px_rgb(168_120_24/.5)] transition group-hover:scale-110">
                 <Icon name={ind.icon} className="size-7" />
               </span>

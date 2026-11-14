@@ -13,7 +13,7 @@ export default function OrderPage() {
   return (
     <section className="hero-bg relative overflow-hidden">
       <div className="dot-grid pointer-events-none absolute inset-0" />
-      <Container className="relative grid items-start gap-12 py-16 sm:py-20 lg:grid-cols-[.9fr_1.1fr]">
+      <Container className="relative grid items-start gap-10 py-12 sm:gap-12 sm:py-20 lg:grid-cols-[.9fr_1.1fr]">
         <OrderIntro />
         <OrderFormCard />
       </Container>
