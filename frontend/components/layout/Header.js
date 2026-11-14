@@ -74,7 +74,6 @@ export default function Header() {
                 {item.short ?? item.label}
               </Link>
             ))}
-            <ButtonLink href="/order" size="md" arrow className="mt-2">Order</ButtonLink>
           </nav>
         </div>
       </header>
