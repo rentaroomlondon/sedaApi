@@ -24,13 +24,16 @@ export default function Header() {
   return (
     <>
       <div className="border-b border-ink-100 bg-surface-2 px-4 py-2 text-center text-xs text-ink-700 sm:py-2.5 sm:text-sm">
-        <span className="hidden sm:inline">Now taking new projects · </span>Free scope and quote for every request
-        <Link href="/order" className="ml-1.5 whitespace-nowrap font-bold text-brand-600 hover:text-brand-700">Order a service →</Link>
+        <span className="hidden sm:inline">Now taking new projects · Free scope and quote for every request</span>
+        <span className="sm:hidden">Free quote on every project</span>
+        <Link href="/order" className="ml-1.5 whitespace-nowrap font-bold text-brand-600 hover:text-brand-700">
+          <span className="hidden sm:inline">Order a service →</span><span className="sm:hidden">Order →</span>
+        </Link>
       </div>
       <header className={`sticky top-0 z-50 border-b bg-white/85 backdrop-blur-xl transition-[border-color,box-shadow] ${
         scrolled ? "border-ink-100 shadow-[0_10px_30px_-22px_rgb(42_34_22/.35)]" : "border-transparent"}`}>
-        <div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-5 sm:h-[74px] sm:px-8">
-          <Link href="/" className="group flex items-center gap-2.5 font-display text-xl font-extrabold tracking-[.08em] text-ink-900">
+        <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:h-[74px] sm:gap-6 sm:px-8">
+          <Link href="/" className="group flex items-center gap-2 font-display text-lg font-extrabold tracking-[.08em] text-ink-900 sm:gap-2.5 sm:text-xl">
             <span className="transition-transform duration-500 group-hover:-rotate-12"><Logo /></span>
             SEDAAPI
           </Link>
@@ -49,13 +52,18 @@ export default function Header() {
           </nav>
           <ButtonLink href="/order" size="sm" arrow className="hidden lg:inline-flex">Order a service</ButtonLink>
 
+          <ButtonLink href="/order" size="sm" className="ml-auto lg:hidden">Order</ButtonLink>
+
           <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="ml-auto grid size-11 place-items-center rounded-xl border border-ink-100 bg-white lg:hidden">
-            <span className="relative block h-0.5 w-5 bg-ink-900 transition before:absolute before:-top-1.5 before:left-0 before:h-0.5 before:w-5 before:bg-ink-900 before:transition after:absolute after:top-1.5 after:left-0 after:h-0.5 after:w-5 after:bg-ink-900 after:transition"
-              style={open ? { background: "transparent" } : undefined}>
-              <span className="sr-only">Menu</span>
-            </span>
+            className={`relative size-10 shrink-0 rounded-full transition-colors duration-300 lg:hidden ${
+              open ? "bg-ink-900" : "bg-surface-2 hover:bg-ink-100"}`}>
+            <span aria-hidden="true"
+              className={`absolute left-1/2 top-1/2 h-[2px] -translate-x-1/2 rounded-full transition-all duration-300 ${
+                open ? "w-[18px] -translate-y-1/2 rotate-45 bg-white" : "w-[18px] -translate-y-[4px] bg-ink-900"}`} />
+            <span aria-hidden="true"
+              className={`absolute top-1/2 h-[2px] rounded-full transition-all duration-300 ${
+                open ? "left-1/2 w-[18px] -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white" : "left-[11px] w-[11px] translate-y-[3px] bg-ink-900"}`} />
           </button>
         </div>
 
@@ -63,11 +71,12 @@ export default function Header() {
           <nav aria-label="Mobile" className="grid gap-1 px-5 py-4">
             {nav.map((item) => (
               <Link key={item.href} href={item.href} onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-lg font-semibold text-ink-800 hover:bg-surface-2">
-                {item.label}
+                className={`rounded-xl px-4 py-2.5 text-base font-semibold hover:bg-surface-2 ${
+                  item.href === pathname ? "bg-brand-50 text-brand-700" : "text-ink-800"}`}>
+                {item.short ?? item.label}
               </Link>
             ))}
-            <ButtonLink href="/order" size="lg" arrow className="mt-2">Order a service</ButtonLink>
+            <ButtonLink href="/order" size="md" arrow className="mt-2">Order</ButtonLink>
           </nav>
         </div>
       </header>
