@@ -31,7 +31,7 @@ export default function Header() {
         </Link>
       </div>
       <header className={`sticky top-0 z-50 border-b bg-white/85 backdrop-blur-xl transition-[border-color,box-shadow] ${
-        scrolled ? "border-ink-100 shadow-[0_10px_30px_-22px_rgb(42_34_22/.35)]" : "border-transparent"}`}>
+        scrolled ? "border-ink-100 shadow-[0_10px_30px_-22px_rgb(19_34_58/.35)]" : "border-transparent"}`}>
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:h-[74px] sm:gap-6 sm:px-8">
           <Link href="/" className="group flex items-center gap-2 font-display text-lg font-extrabold tracking-[.08em] text-ink-900 sm:gap-2.5 sm:text-xl">
             <span className="transition-transform duration-500 group-hover:-rotate-12"><Logo /></span>

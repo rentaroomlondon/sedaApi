@@ -204,7 +204,7 @@ export default function OrderForm() {
           <button type="button" onClick={() => { setError(""); setStep((s) => s - 1); }}
             className={`rounded-xl px-3 py-2 font-bold text-ink-700 hover:bg-surface-2 ${step === 1 ? "invisible" : ""}`}>← Back</button>
           <button type="submit" disabled={status === "sending"}
-            className="btn-shine group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-5 py-3.5 sm:px-6 font-bold text-white shadow-[0_14px_34px_-12px_rgb(168_120_24/.65)] transition hover:-translate-y-0.5 disabled:opacity-60">
+            className="btn-shine group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-5 py-3.5 sm:px-6 font-bold text-white shadow-[0_14px_34px_-12px_rgb(31_111_191/.65)] transition hover:-translate-y-0.5 disabled:opacity-60">
             {status === "sending" ? "Sending…" : step < 3 ? "Next step" : data.kind === "partner" ? "Send partner request" : "Send my order"}
             <Icon name="arrow" className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2.2} />
           </button>

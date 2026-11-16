@@ -27,8 +27,8 @@ export function SectionHead({ eyebrow, title, text }) {
 }
 
 const variants = {
-  primary: "btn-shine bg-gradient-brand text-white shadow-[0_14px_34px_-12px_rgb(168_120_24/.55)] hover:shadow-[0_18px_40px_-12px_rgb(168_120_24/.65)]",
-  dark: "bg-brand-600 text-white shadow-[0_14px_30px_-14px_rgb(168_120_24/.55)] hover:bg-brand-700",
+  primary: "btn-shine bg-gradient-brand text-white shadow-[0_14px_34px_-12px_rgb(31_111_191/.55)] hover:shadow-[0_18px_40px_-12px_rgb(31_111_191/.65)]",
+  dark: "bg-brand-600 text-white shadow-[0_14px_30px_-14px_rgb(31_111_191/.55)] hover:bg-brand-700",
   outline: "border-[1.5px] border-ink-100 bg-white text-ink-900 hover:border-brand-600 hover:text-brand-700",
 };
 const sizes = { sm: "px-4 py-2.5 text-sm rounded-xl", md: "px-6 py-3.5 text-[15px] rounded-xl", lg: "px-6 py-3.5 text-base rounded-2xl sm:px-7 sm:py-4" };

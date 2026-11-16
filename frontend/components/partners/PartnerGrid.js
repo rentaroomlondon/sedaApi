@@ -32,7 +32,7 @@ export default function PartnerGrid() {
             className={`relative grid content-start gap-3 rounded-3xl border p-5 transition sm:p-6 duration-300 hover:-translate-y-1 ${
               p.featured && active === "all"
                 ? "overflow-hidden border-brand-100 bg-gradient-to-br from-brand-50 via-white to-surface-2 sm:col-span-2"
-                : "border-ink-100 bg-white hover:shadow-[0_20px_50px_-28px_rgb(42_34_22/.25)]"}`}>
+                : "border-ink-100 bg-white hover:shadow-[0_20px_50px_-28px_rgb(19_34_58/.25)]"}`}>
             {p.featured && active === "all" && (
               <div className="pointer-events-none absolute -right-16 -top-20 size-64 rounded-full bg-aqua-400/20 blur-3xl" />
             )}

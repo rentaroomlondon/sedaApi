@@ -33,12 +33,12 @@ export function Logo({ className = "size-9" }) {
     <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
       <defs>
         <linearGradient id="sedaapi-lg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#a87818" />
-          <stop offset="1" stopColor="#e3b94f" />
+          <stop offset="0" stopColor="#18599c" />
+          <stop offset="1" stopColor="#38a8e0" />
         </linearGradient>
       </defs>
       <path d="M44 14c-5-6-18-7-24-1-6 6-3 14 5 17 6 2 9 4 8 8-1 5-9 6-15 3 5 8 21 9 28 1 6-7 2-15-6-18-6-2-8-4-7-7 1-4 8-4 11-3z" fill="url(#sedaapi-lg)" />
-      <path d="M46 22c-8-1-15 5-15 13s7 15 15 14c-6 5-18 4-23-4-5-8 0-20 10-24 5-2 10-1 13 1z" fill="#c2b6a1" />
+      <path d="M46 22c-8-1-15 5-15 13s7 15 15 14c-6 5-18 4-23-4-5-8 0-20 10-24 5-2 10-1 13 1z" fill="#a9d4f5" />
     </svg>
   );
 }

@@ -9,7 +9,7 @@ function HeroVisual() {
       <div className="absolute inset-[16%] animate-spin-slow rounded-full border border-aqua-400/40 [animation-direction:reverse]" />
 
       {/* main project card */}
-      <div className="absolute inset-x-[4%] top-[22%] rounded-3xl border border-white bg-white/95 p-4 sm:inset-x-[12%] sm:top-[20%] sm:p-6 shadow-[0_40px_80px_-30px_rgb(42_34_22/.45)] backdrop-blur">
+      <div className="absolute inset-x-[4%] top-[22%] rounded-3xl border border-white bg-white/95 p-4 sm:inset-x-[12%] sm:top-[20%] sm:p-6 shadow-[0_40px_80px_-30px_rgb(19_34_58/.45)] backdrop-blur">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-ink-500">Your project</p>
@@ -35,11 +35,11 @@ function HeroVisual() {
       </div>
 
       {/* floating chips */}
-      <div className="absolute left-0 top-[2%] flex animate-float items-center gap-2.5 rounded-2xl bg-white p-2.5 pr-4 sm:top-[6%] sm:gap-3 sm:p-3.5 sm:pr-5 shadow-[0_24px_50px_-20px_rgb(42_34_22/.35)]">
+      <div className="absolute left-0 top-[2%] flex animate-float items-center gap-2.5 rounded-2xl bg-white p-2.5 pr-4 sm:top-[6%] sm:gap-3 sm:p-3.5 sm:pr-5 shadow-[0_24px_50px_-20px_rgb(19_34_58/.35)]">
         <span className="grid size-8 place-items-center rounded-xl bg-brand-600 sm:size-10 text-white"><Icon name="chip" className="size-5" /></span>
         <div><p className="font-display text-sm font-bold leading-tight sm:text-base">AI automation</p><p className="text-xs text-ink-500">Reports drafted for you</p></div>
       </div>
-      <div className="absolute bottom-[14%] right-0 flex animate-float items-center gap-2.5 rounded-2xl bg-white p-2.5 pr-4 sm:bottom-[16%] sm:gap-3 sm:p-3.5 sm:pr-5 shadow-[0_24px_50px_-20px_rgb(42_34_22/.35)] [animation-delay:-2s]">
+      <div className="absolute bottom-[14%] right-0 flex animate-float items-center gap-2.5 rounded-2xl bg-white p-2.5 pr-4 sm:bottom-[16%] sm:gap-3 sm:p-3.5 sm:pr-5 shadow-[0_24px_50px_-20px_rgb(19_34_58/.35)] [animation-delay:-2s]">
         <span className="grid size-8 place-items-center rounded-xl bg-aqua-500 sm:size-10 text-white"><Icon name="video" className="size-5" /></span>
         <div><p className="font-display text-sm font-bold leading-tight sm:text-base">Video platform</p><p className="text-xs text-ink-500">Every camera, one screen</p></div>
       </div>

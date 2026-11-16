@@ -12,7 +12,7 @@ export default function ServiceList() {
             className="card-glow scroll-mt-28 grid gap-8 rounded-[28px] border border-ink-100 bg-white p-5 sm:gap-10 sm:p-10 lg:grid-cols-[1.1fr_1fr]">
             <div className="grid content-start gap-5">
               <div className="flex items-center gap-4">
-                <span className="grid size-14 shrink-0 place-items-center rounded-2xl sm:size-16 bg-gradient-brand text-white shadow-[0_14px_30px_-12px_rgb(168_120_24/.6)]">
+                <span className="grid size-14 shrink-0 place-items-center rounded-2xl sm:size-16 bg-gradient-brand text-white shadow-[0_14px_30px_-12px_rgb(31_111_191/.6)]">
                   <Icon name={s.icon} className="size-8" />
                 </span>
                 <span className="font-display text-sm font-extrabold uppercase tracking-widest text-ink-300">Service 0{i + 1}</span>

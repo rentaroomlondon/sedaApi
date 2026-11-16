@@ -14,7 +14,7 @@ export default function HowToOrder() {
           </div>
           {orderSteps.map((s, i) => (
             <div key={s.title} className="relative grid justify-items-center gap-3 text-center">
-              <span className="relative z-10 grid size-16 place-items-center sm:size-[72px] rounded-full bg-gradient-brand font-display text-2xl font-extrabold text-white shadow-[0_14px_30px_-12px_rgb(168_120_24/.6)] ring-8 ring-white">{i + 1}</span>
+              <span className="relative z-10 grid size-16 place-items-center sm:size-[72px] rounded-full bg-gradient-brand font-display text-2xl font-extrabold text-white shadow-[0_14px_30px_-12px_rgb(31_111_191/.6)] ring-8 ring-white">{i + 1}</span>
               <h3 className="font-display text-xl font-bold">{s.title}</h3>
               <p className="max-w-[30ch] text-ink-500">{s.text}</p>
               {s.badge && <span className="rounded-full bg-mint-500/12 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-mint-500">{s.badge}</span>}

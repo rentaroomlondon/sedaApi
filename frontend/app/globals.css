@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
-/* SEDAAPI colour system (light gold)
-   Warm brown ink for text, rich gold as the main brand colour, soft light gold as the accent,
-   warm ivory surfaces. Gradients stay inside the gold family so they never turn muddy.
-   Token names are kept so classes stay stable: "brand" = gold, "aqua" = light gold. */
+/* SEDAAPI colour system (professional light blue)
+   Cool slate-navy ink for text, confident mid blue as the main brand colour, light sky blue
+   as the accent, crisp cool-white surfaces. Gradients stay inside the blue family.
+   Token names are kept so classes stay stable: "brand" = blue, "aqua" = light sky blue. */
 @theme {
-  --color-ink-950: #1c160d;
-  --color-ink-900: #2a2216;
-  --color-ink-800: #3a2f1f;
-  --color-ink-700: #4f4434;
-  --color-ink-500: #7a6d5a;
-  --color-ink-300: #c2b6a1;
-  --color-ink-100: #efe7d8;
+  --color-ink-950: #0b1524;
+  --color-ink-900: #13223a;
+  --color-ink-800: #1e3150;
+  --color-ink-700: #34476a;
+  --color-ink-500: #5f7191;
+  --color-ink-300: #b4c2d6;
+  --color-ink-100: #e5ecf5;
 
-  --color-surface: #fcf9f3;
-  --color-surface-2: #f7f0e3;
+  --color-surface: #f6f9fd;
+  --color-surface-2: #edf3fa;
 
-  --color-brand-50: #fdf8ec;
-  --color-brand-100: #f8ecd0;
-  --color-brand-400: #d4a843;
-  --color-brand-500: #c0902c;
-  --color-brand-600: #a87818;
-  --color-brand-700: #8a6112;
+  --color-brand-50: #eef6ff;
+  --color-brand-100: #d9ebff;
+  --color-brand-400: #4a9de8;
+  --color-brand-500: #2b84d6;
+  --color-brand-600: #1f6fbf;
+  --color-brand-700: #18599c;
 
-  --color-aqua-300: #f3dc9e;
-  --color-aqua-400: #e3b94f;
-  --color-aqua-500: #cf9f32;
+  --color-aqua-300: #bfe3fa;
+  --color-aqua-400: #6cc3f0;
+  --color-aqua-500: #38a8e0;
 
   --color-mint-500: #10b981;
 
@@ -42,7 +42,7 @@
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 @keyframes float { 50% { transform: translateY(-12px); } }
 @keyframes marquee { to { transform: translateX(-50%); } }
-@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgb(227 185 79 / .55); } 80%,100% { box-shadow: 0 0 0 12px rgb(227 185 79 / 0); } }
+@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgb(108 195 240 / .55); } 80%,100% { box-shadow: 0 0 0 12px rgb(108 195 240 / 0); } }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @keyframes slide-in { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
 @keyframes draw { to { stroke-dashoffset: 0; } }
@@ -50,7 +50,7 @@
 
 html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
 html, body { overflow-x: clip; }
-body { background: #fffdf9; color: var(--color-ink-900); }
+body { background: #fbfdff; color: var(--color-ink-900); }
 ::selection { background: var(--color-brand-100); }
 
 /* signature gradient */
@@ -71,11 +71,11 @@ body { background: #fffdf9; color: var(--color-ink-900); }
 /* hero backdrop */
 .hero-bg {
   background:
-    radial-gradient(900px 480px at 85% -5%, rgb(227 185 79 / .16), transparent 60%),
-    radial-gradient(900px 520px at 0% 100%, rgb(168 120 24 / .12), transparent 60%);
+    radial-gradient(900px 480px at 85% -5%, rgb(108 195 240 / .18), transparent 60%),
+    radial-gradient(900px 520px at 0% 100%, rgb(31 111 191 / .10), transparent 60%);
 }
 .dot-grid {
-  background-image: radial-gradient(rgb(42 34 22 / .09) 1px, transparent 1px);
+  background-image: radial-gradient(rgb(19 34 58 / .09) 1px, transparent 1px);
   background-size: 22px 22px;
   mask-image: radial-gradient(ellipse at 70% 30%, #000 25%, transparent 70%);
 }

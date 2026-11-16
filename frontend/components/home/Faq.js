@@ -9,7 +9,7 @@ export default function Faq() {
         <Reveal><SectionHead eyebrow="FAQ" title="Questions before you order." /></Reveal>
         <Reveal className="mx-auto grid max-w-3xl gap-3">
           {faqs.map((f) => (
-            <details key={f.q} className="group rounded-2xl border border-ink-100 bg-white transition open:border-brand-100 open:shadow-[0_20px_40px_-28px_rgb(168_120_24/.45)]">
+            <details key={f.q} className="group rounded-2xl border border-ink-100 bg-white transition open:border-brand-100 open:shadow-[0_20px_40px_-28px_rgb(31_111_191/.45)]">
               <summary className="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-base font-bold sm:px-6 sm:py-5 sm:text-lg">
                 {f.q}
                 <span className="faq-icon grid size-8 shrink-0 place-items-center rounded-full bg-surface-2 text-xl transition">+</span>

@@ -12,7 +12,7 @@ export default function WhyUs() {
           text="We keep the app, the video and the signal under one roof, so the whole system works the day it ships." /></Reveal>
         <div className="grid gap-5 md:grid-cols-3">
           {why.map((w, i) => (
-            <Reveal key={w.title} delay={i * 90} className="rounded-3xl border border-ink-100 bg-white p-6 transition sm:p-8 hover:-translate-y-1 hover:border-brand-100 hover:shadow-[0_30px_60px_-35px_rgb(168_120_24/.35)]">
+            <Reveal key={w.title} delay={i * 90} className="rounded-3xl border border-ink-100 bg-white p-6 transition sm:p-8 hover:-translate-y-1 hover:border-brand-100 hover:shadow-[0_30px_60px_-35px_rgb(31_111_191/.35)]">
               <span className="text-gradient font-display text-4xl font-extrabold sm:text-5xl">{w.big}</span>
               <h3 className="mt-4 font-display text-xl font-bold text-ink-900">{w.title}</h3>
               <p className="mt-2 text-ink-500">{w.text}</p>
